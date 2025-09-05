@@ -7,43 +7,120 @@ import 'package:widgets/mixed_view_example.dart';
 import 'package:widgets/menu_page.dart';
 import 'package:widgets/counter_app.dart';
 import 'package:widgets/home_page.dart';
+import 'package:widgets/input_widget.dart';
 
 void main() {
-  // runApp(Text('hello world', textDirection: TextDirection.ltr),);
-  // runApp(Center(child: Text('hello world', textDirection: TextDirection.ltr)));
-  //  runApp(CupertinoApp());
+  runApp(MyApp());
+}
 
-  runApp(
-    MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: Align(
-            alignment: Alignment.centerRight,
-            child: Text(
-              'Home page',
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-            ),
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(home: HomeScreen());
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Align(
+          alignment: Alignment.centerRight,
+          child: Text(
+            'Home Page',
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
-          actions: [],
         ),
-
-        body:
-        // SingleChildScrollView(
-        //   child: 
-           // simplePractiseWidget(),
-            // ProfileAssignment(),
-            // simplePractiseWidget(),
-            // ListViewExample(),
-            // GridViewExample(),
-            //MenuPage(),
-            //CounterApp(),
-           HomePage()
-        // )
-           
+        actions: [],
       ),
-    ),
-  );
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SimpleWidget()),
+                  );
+                },
+                child: Text('Open Simple Widget'),
+              ),
+
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ProfileAssignment(),
+                    ),
+                  );
+                },
+                child: Text('Open Profile Assignment'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ListViewExample()),
+                  );
+                },
+                child: Text('Open List View Example'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => GridViewExample()),
+                  );
+                },
+                child: Text('Open Grid View Example'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MenuPage()),
+                  );
+                },
+                child: Text('Open Menu Page'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CounterApp()),
+                  );
+                },
+                child: Text('Open Counter App'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                },
+                child: Text('Open Home Page'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => InputWidget()),
+                  );
+                },
+                child: Text('Open Input Widget'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 /*

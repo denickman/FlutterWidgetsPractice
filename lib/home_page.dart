@@ -20,8 +20,10 @@ class HomePage extends StatefulWidget {
 }
  
 class _HomePageState extends State<HomePage> {
+  
   final imageList = [image1, image2, image3, image4,];
   int index = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
