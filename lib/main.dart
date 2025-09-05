@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:widgets/menu_page.dart';
 import 'package:widgets/profile_page.dart';
 import 'package:widgets/list_view_example.dart';
 import 'package:widgets/grid_view_example.dart';
 import 'package:widgets/mixed_view_example.dart';
+import 'package:widgets/menu_page.dart';
+import 'package:widgets/counter_app.dart';
+import 'package:widgets/home_page.dart';
 
 void main() {
   // runApp(Text('hello world', textDirection: TextDirection.ltr),);
@@ -31,7 +35,10 @@ void main() {
             // ProfileAssignment(),
             // simplePractiseWidget(),
             // ListViewExample(),
-            GridViewExample(),
+            // GridViewExample(),
+            //MenuPage(),
+            //CounterApp(),
+           HomePage()
         // )
            
       ),

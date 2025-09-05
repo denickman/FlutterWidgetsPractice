@@ -8,6 +8,7 @@ class GridViewExample extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('List View Example')),
       body: GridView.builder(
+        itemCount: items.length,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 4,
           crossAxisSpacing: 5,
