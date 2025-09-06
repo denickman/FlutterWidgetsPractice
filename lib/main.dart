@@ -7,6 +7,7 @@ import 'package:widgets/mixed_view_example.dart';
 import 'package:widgets/counter_app.dart';
 import 'package:widgets/home_page.dart';
 import 'package:widgets/input_widget.dart';
+import 'package:widgets/assignment/todo_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,6 +30,7 @@ class HomeScreen extends StatelessWidget {
     {'title': 'Open Counter App', 'widget': CounterApp()},
     {'title': 'Open Home Page', 'widget': HomePage()},
     {'title': 'Open Input Widget', 'widget': InputWidget()},
+     {'title': 'Todo Flow', 'widget': TodoPage()},
   ];
 
   @override
